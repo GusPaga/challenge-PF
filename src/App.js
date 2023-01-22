@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./Styles/Style.scss";
+import { icons } from "./Assets/support";
+import { ImageBar } from "./Components/imageBar";
 
 function App() {
+  let [value, setValue] = useState(1);
+  const maxLength = icons.length;
+  console.log(value);
+
+  const handleFront = (e) => {
+    if (value === maxLength) {
+      setValue(1);
+    } else {
+      setValue(value + 1);
+    }
+  };
+
+  const handleBack = (e) => {
+    if (value === 1) {
+      setValue(maxLength);
+    } else {
+      setValue(value - 1);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ImageBar handleFront={handleFront} handleBack={handleBack} value={value} />
   );
 }
 

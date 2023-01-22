@@ -1,0 +1,41 @@
+#app {
+    margin-top: 30vh;
+}
+
+.buttons {
+    height: 80px;
+    width: 80px;
+    background: linear-gradient(233.16deg, #00B0CE -10.31%, rgba(0, 176, 206, 0.1) 110.31%);
+
+    &:hover {
+        transition: 0.4s;
+        transform: scaleY(1.1) scaleX(1.1);
+        background: linear-gradient(233.16deg, #00B0CE -10.31%, rgba(0, 176, 206, 0.5) 110.31%);
+    }
+}
+
+.component {
+    img {
+        height: 130px;
+        width: 150px;
+        border-radius: 30px;
+        margin-top: 39px;
+        margin-left: 33px;
+    }
+}
+
+.logo {
+    background: linear-gradient(233.16deg, #00B0CE -10.31%, rgba(0, 176, 206, 0.3) 110.31%);
+    height: 206px;
+    width: 216px;
+    border-radius: 30px;
+}
+
+.select {
+    background: linear-gradient(233.16deg, #00B0CE -10.31%, rgba(0, 176, 206, 0.3) 110.31%);
+    transition: 0.4s;
+    transform: scaleY(1.1) scaleX(1.1);
+    height: 206px;
+    width: 216px;
+    border-radius: 30px;
+}
